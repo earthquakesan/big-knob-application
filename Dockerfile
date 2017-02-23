@@ -21,4 +21,4 @@ COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 COPY healthcheck.sh /
-HEALTHCHECK --interval=10s --timeout=3s --retries=1000 CMD /healthcheck.sh
+HEALTHCHECK --interval=30s --timeout=3s --retries=1000 CMD /healthcheck.sh
