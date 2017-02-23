@@ -18,3 +18,5 @@ EXPOSE 8000
 
 COPY docker-entrypoint.sh /
 ENTRYPOINT ["/docker-entrypoint.sh"]
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=0 CMD curl http://localhost:8000/status/ || exit 1

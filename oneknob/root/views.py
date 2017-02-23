@@ -27,6 +27,8 @@ def push(request):
 def status(request):
     _push = Path("/tmp/button_pushed")
     if _push.exists():
+        # Healthy
         return HttpResponse("0")
     else:
-        return HttpResponse("-1")
+        # Not healthy
+        return HttpResponse("1")
