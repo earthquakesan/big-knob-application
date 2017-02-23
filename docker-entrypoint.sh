@@ -9,8 +9,8 @@ tail -n 0 -f /srv/logs/*.log &
 
 # Start Gunicorn processes
 echo Starting Gunicorn.
-exec gunicorn oneknob.wsgi:application \
-    --name oneknob \
+exec gunicorn bigknob.wsgi:application \
+    --name bigknob \
     --bind 0.0.0.0:8000 \
     --workers 1 \
     --log-level=info \
